@@ -1,19 +1,473 @@
 {
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.0",
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
+  "version": "1.3",
   "body": [
     {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "horizontalAlignment": "Left",
+              "width": "stretch",
+              "verticalContentAlignment": "Center",
+              "$when": "",
+              "type": "Column",
+              "items": [
+                {
+                  "horizontalAlignment": "Left",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "TextBlock",
+                  "size": "Large",
+                  "color": "Default",
+                  "weight": "Bolder",
+                  "wrap": true,
+                  "isSubtle": false,
+                  "style": "default",
+                  "id": "",
+                  "text": "2023"
+                }
+              ]
+            },
+            {
+              "horizontalAlignment": "Left",
+              "verticalContentAlignment": "Center",
+              "$when": "",
+              "type": "Column",
+              "items": [
+                {
+                  "horizontalAlignment": "Right",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "TextBlock",
+                  "size": "Default",
+                  "color": "Accent",
+                  "weight": "Default",
+                  "wrap": true,
+                  "isSubtle": false,
+                  "style": "default",
+                  "id": "",
+                  "text": "Change year"
+                }
+              ],
+              "width": "stretch"
+            }
+          ]
+        }
+      ],
+      "id": "",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "CLICK_CHANGE_YEAR",
+          "selectedIndex": "${$index}"
+        },
+        "title": null,
+        "tooltip": null
+      }
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "isSubtle": false,
+          "style": "default",
+          "id": "",
+          "text": "My current election"
+        },
+        {
+          "spacing": "None",
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Bolder",
+          "isSubtle": false,
+          "style": "default",
+          "id": "",
+          "text": "Perks+"
+        }
+      ],
+      "id": ""
+    },
+    {
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "horizontalAlignment": "Left",
+          "width": "stretch",
+          "verticalContentAlignment": "Center",
+          "$when": "",
+          "type": "Column",
+          "items": [
+            {
+              "horizontalAlignment": "Center",
+              "width": "176.66px",
+              "verticalContentAlignment": "center",
+              "$when": "",
+              "type": "Image",
+              "id": "",
+              "url": "https://localhost:4321/dist/PerksPlusLanding_42ce92fad1b0bebc86b4d7e0a9e01a97.png",
+              "height": "90px",
+              "altText": "Perks+ image"
+            },
+            {
+              "horizontalAlignment": "Center",
+              "verticalContentAlignment": "center",
+              "$when": "",
+              "type": "TextBlock",
+              "size": "Large",
+              "color": "Accent",
+              "weight": "Bolder",
+              "wrap": true,
+              "isSubtle": false,
+              "style": "default",
+              "id": "",
+              "text": "$900"
+            },
+            {
+              "horizontalAlignment": "Center",
+              "verticalContentAlignment": "center",
+              "$when": "",
+              "type": "TextBlock",
+              "size": "Default",
+              "color": "Default",
+              "weight": "Default",
+              "wrap": true,
+              "isSubtle": false,
+              "style": "default",
+              "id": "",
+              "text": "Balance remaining"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
       "type": "TextBlock",
-      "text": "This app is installed in this conversation. You can now use it to do some great stuff!!",
+      "size": "Medium",
+      "color": "Default",
+      "weight": "Bolder",
       "isSubtle": false,
-      "wrap": true
+      "style": "heading",
+      "id": "",
+      "text": "Claims history"
+    },
+    {
+      "separator": true,
+      "spacing": "Medium",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "horizontalAlignment": "Left",
+              "width": "stretch",
+              "verticalContentAlignment": "Center",
+              "$when": "",
+              "type": "Column",
+              "items": [
+                {
+                  "spacing": "Small",
+                  "horizontalAlignment": "Left",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "TextBlock",
+                  "size": "Default",
+                  "color": "Default",
+                  "weight": "Bolder",
+                  "wrap": true,
+                  "maxLines": 2,
+                  "isSubtle": false,
+                  "style": "default",
+                  "id": "",
+                  "text": "${name}"
+                },
+                {
+                  "spacing": "None",
+                  "horizontalAlignment": "Left",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "TextBlock",
+                  "size": "Small",
+                  "color": "Default",
+                  "weight": "Default",
+                  "isSubtle": false,
+                  "style": "default",
+                  "id": "",
+                  "text": "${date}"
+                },
+                {
+                  "spacing": "Small",
+                  "horizontalAlignment": "Left",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "horizontalAlignment": "Left",
+                      "width": "auto",
+                      "verticalContentAlignment": "Center",
+                      "$when": "",
+                      "type": "Column",
+                      "items": [
+                        {
+                          "horizontalAlignment": "Left",
+                          "width": "16px",
+                          "verticalContentAlignment": "center",
+                          "$when": "${isPending}",
+                          "type": "Image",
+                          "id": "",
+                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/InReview_95d30278fce5237207669aeb8c949ebe.svg",
+                          "height": "16px",
+                          "altText": "In review icon"
+                        },
+                        {
+                          "horizontalAlignment": "Left",
+                          "width": "16px",
+                          "verticalContentAlignment": "center",
+                          "$when": "${isPaid}",
+                          "type": "Image",
+                          "id": "",
+                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Success_43b8ad1b228d1a1d25d87a8fbfbf1947.svg",
+                          "height": "16px",
+                          "altText": "Green check mark icon"
+                        },
+                        {
+                          "horizontalAlignment": "Left",
+                          "width": "16px",
+                          "verticalContentAlignment": "center",
+                          "$when": "${isIneligible}",
+                          "type": "Image",
+                          "id": "",
+                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Error_49eb5cb9b49a0bda1ee92280de2f7392.svg",
+                          "height": "16px",
+                          "altText": "Red alert icon"
+                        }
+                      ]
+                    },
+                    {
+                      "spacing": "Small",
+                      "horizontalAlignment": "Left",
+                      "verticalContentAlignment": "Center",
+                      "$when": "",
+                      "type": "Column",
+                      "items": [
+                        {
+                          "horizontalAlignment": "Left",
+                          "verticalContentAlignment": "center",
+                          "$when": "",
+                          "type": "TextBlock",
+                          "size": "Small",
+                          "color": "Default",
+                          "weight": "Default",
+                          "isSubtle": false,
+                          "style": "default",
+                          "id": "",
+                          "text": "${status}"
+                        }
+                      ],
+                      "width": "stretch"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "horizontalAlignment": "Left",
+              "width": "auto",
+              "verticalContentAlignment": "Center",
+              "$when": "",
+              "type": "Column",
+              "items": [
+                {
+                  "horizontalAlignment": "Left",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "horizontalAlignment": "Left",
+                      "width": "auto",
+                      "verticalContentAlignment": "Center",
+                      "$when": "",
+                      "type": "Column",
+                      "items": [
+                        {
+                          "horizontalAlignment": "Left",
+                          "verticalContentAlignment": "center",
+                          "$when": "",
+                          "type": "TextBlock",
+                          "size": "Medium",
+                          "color": "Default",
+                          "weight": "Default",
+                          "isSubtle": false,
+                          "style": "default",
+                          "id": "",
+                          "text": "${amount}"
+                        }
+                      ]
+                    },
+                    {
+                      "horizontalAlignment": "Right",
+                      "width": "auto",
+                      "verticalContentAlignment": "Center",
+                      "$when": "",
+                      "type": "Column",
+                      "items": [
+                        {
+                          "horizontalAlignment": "Left",
+                          "width": "20px",
+                          "verticalContentAlignment": "center",
+                          "$when": "",
+                          "type": "Image",
+                          "id": "",
+                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Chevron-right_568d82caab07be9ae6d8e1bbef6bfdca.svg",
+                          "height": "20px",
+                          "altText": "Right chevron icon"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "id": null,
+      "$data": "${claimsHistory}",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "VIEW_CLAIM_HISTORY_DETAIL",
+          "selectedIndex": "${$index}"
+        },
+        "title": null,
+        "tooltip": null
+      }
+    },
+    {
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "TextBlock",
+      "size": "Medium",
+      "color": "Default",
+      "weight": "Bolder",
+      "isSubtle": false,
+      "style": "heading",
+      "id": "",
+      "text": "Additional information"
+    },
+    {
+      "separator": true,
+      "spacing": "Medium",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "horizontalAlignment": "Left",
+              "width": "stretch",
+              "verticalContentAlignment": "Center",
+              "$when": "",
+              "type": "Column",
+              "items": [
+                {
+                  "spacing": "Small",
+                  "horizontalAlignment": "Left",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "TextBlock",
+                  "size": "Default",
+                  "color": "Default",
+                  "weight": "Default",
+                  "isSubtle": false,
+                  "style": "default",
+                  "id": "",
+                  "text": "Perks+ Eligible Expenses"
+                }
+              ]
+            },
+            {
+              "horizontalAlignment": "Left",
+              "width": "auto",
+              "verticalContentAlignment": "Center",
+              "$when": "",
+              "type": "Column",
+              "items": [
+                {
+                  "horizontalAlignment": "Left",
+                  "width": "20px",
+                  "verticalContentAlignment": "center",
+                  "$when": "",
+                  "type": "Image",
+                  "id": "",
+                  "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Chevron-right_568d82caab07be9ae6d8e1bbef6bfdca.svg",
+                  "height": "20px",
+                  "altText": "Chevron right icon"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "id": null,
+      "$data": "${help}",
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "${link}"
+      }
     }
   ],
-  "actions": [
-    {
-      "type": "Action.Submit",
-      "title": "Close"
-    }
-  ]
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
 }

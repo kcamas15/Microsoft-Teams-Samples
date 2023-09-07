@@ -1,14 +1,19 @@
 ﻿using AdaptiveCards;
+using Microsoft.Bot.Schema;
 using Microsoft.Bot.Schema.Teams;
 using Microsoft.BotBuilderSamples.Models;
+using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Microsoft.BotBuilderSamples.Helpers
 {
     public class CardHelper
     {
+        /**
         public static List<MessagingExtensionAttachment> CreateAdaptiveCardAttachment(MessagingExtensionAction action, CardResponse createCardResponse)
         {
+            
             AdaptiveCard adaptiveCard = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0));
             adaptiveCard.Body = new List<AdaptiveElement>()
             {
@@ -16,6 +21,7 @@ namespace Microsoft.BotBuilderSamples.Helpers
                 {
                     Columns = new List<AdaptiveColumn>()
                     {
+   
                         new AdaptiveColumn()
                         {
                             Items=new List<AdaptiveElement>()
@@ -36,9 +42,10 @@ namespace Microsoft.BotBuilderSamples.Helpers
                             {
                                 new AdaptiveTextBlock()
                                 {
-                                    Text= createCardResponse.Title,
+                                    Text= "2003",
                                     Wrap=true,
-                                    Size=AdaptiveTextSize.Medium,
+                                    Size=AdaptiveTextSize.Large,
+                                    Weight=AdaptiveTextWeight.Default
                                 }
                             },
                             Width = AdaptiveColumnWidth.Auto
@@ -55,7 +62,7 @@ namespace Microsoft.BotBuilderSamples.Helpers
                             {
                                 new AdaptiveTextBlock()
                                 {
-                                    Text= "Designation :",
+                                    Text= "My current election Perks+",
                                     Wrap=true,
                                     Size=AdaptiveTextSize.Medium,
                                     Weight=AdaptiveTextWeight.Bolder
@@ -112,12 +119,31 @@ namespace Microsoft.BotBuilderSamples.Helpers
                     }
                 },
             };
+            
+
 
             var attachments = new List<MessagingExtensionAttachment>();
             attachments.Add(new MessagingExtensionAttachment
             {
                 Content = adaptiveCard,
                 ContentType = AdaptiveCard.ContentType
+            });
+
+            return attachments;
+        }
+        */
+
+        public static List<MessagingExtensionAttachment> CreateAdaptiveCardAttachment(MessagingExtensionAction action, CardResponse createCardResponse)
+        {
+            // combine path for cross platform support
+            var paths = new[] { ".", "Resources", "adaptiveCard.json" };
+            var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
+
+            var attachments = new List<MessagingExtensionAttachment>();
+            attachments.Add(new MessagingExtensionAttachment
+            {
+                Content = JsonConvert.DeserializeObject(adaptiveCardJson),
+                ContentType = "application/vnd.microsoft.card.adaptive",
             });
 
             return attachments;
