@@ -7,5 +7,8 @@
         public string Text { get; set; }
         public string UserName { get; set; }
         public string UserPwd { get; set; }
+        public string Amount {  get; set; }
+        public string Merchant { get; set; }
+        public string Date {  get; set; }
     }
 }

@@ -134,7 +134,7 @@
               "$when": "",
               "type": "Image",
               "id": "",
-              "url": "https://localhost:4321/dist/PerksPlusLanding_42ce92fad1b0bebc86b4d7e0a9e01a97.png",
+              "url": "https://i.imgur.com/gvBcaQz.png",
               "height": "90px",
               "altText": "Perks+ image"
             },
@@ -220,7 +220,7 @@
                   "isSubtle": false,
                   "style": "default",
                   "id": "",
-                  "text": "${name}"
+                  "text": "Sports Bicycle"
                 },
                 {
                   "spacing": "None",
@@ -234,81 +234,7 @@
                   "isSubtle": false,
                   "style": "default",
                   "id": "",
-                  "text": "${date}"
-                },
-                {
-                  "spacing": "Small",
-                  "horizontalAlignment": "Left",
-                  "verticalContentAlignment": "center",
-                  "$when": "",
-                  "type": "ColumnSet",
-                  "columns": [
-                    {
-                      "horizontalAlignment": "Left",
-                      "width": "auto",
-                      "verticalContentAlignment": "Center",
-                      "$when": "",
-                      "type": "Column",
-                      "items": [
-                        {
-                          "horizontalAlignment": "Left",
-                          "width": "16px",
-                          "verticalContentAlignment": "center",
-                          "$when": "${isPending}",
-                          "type": "Image",
-                          "id": "",
-                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/InReview_95d30278fce5237207669aeb8c949ebe.svg",
-                          "height": "16px",
-                          "altText": "In review icon"
-                        },
-                        {
-                          "horizontalAlignment": "Left",
-                          "width": "16px",
-                          "verticalContentAlignment": "center",
-                          "$when": "${isPaid}",
-                          "type": "Image",
-                          "id": "",
-                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Success_43b8ad1b228d1a1d25d87a8fbfbf1947.svg",
-                          "height": "16px",
-                          "altText": "Green check mark icon"
-                        },
-                        {
-                          "horizontalAlignment": "Left",
-                          "width": "16px",
-                          "verticalContentAlignment": "center",
-                          "$when": "${isIneligible}",
-                          "type": "Image",
-                          "id": "",
-                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Error_49eb5cb9b49a0bda1ee92280de2f7392.svg",
-                          "height": "16px",
-                          "altText": "Red alert icon"
-                        }
-                      ]
-                    },
-                    {
-                      "spacing": "Small",
-                      "horizontalAlignment": "Left",
-                      "verticalContentAlignment": "Center",
-                      "$when": "",
-                      "type": "Column",
-                      "items": [
-                        {
-                          "horizontalAlignment": "Left",
-                          "verticalContentAlignment": "center",
-                          "$when": "",
-                          "type": "TextBlock",
-                          "size": "Small",
-                          "color": "Default",
-                          "weight": "Default",
-                          "isSubtle": false,
-                          "style": "default",
-                          "id": "",
-                          "text": "${status}"
-                        }
-                      ],
-                      "width": "stretch"
-                    }
-                  ]
+                  "text": "9/30/2023"
                 }
               ]
             },
@@ -343,7 +269,7 @@
                           "isSubtle": false,
                           "style": "default",
                           "id": "",
-                          "text": "${amount}"
+                          "text": "$900"
                         }
                       ]
                     },
@@ -361,7 +287,7 @@
                           "$when": "",
                           "type": "Image",
                           "id": "",
-                          "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Chevron-right_568d82caab07be9ae6d8e1bbef6bfdca.svg",
+                          "url": "https://cdn3.iconfinder.com/data/icons/minicons-ultimate-pack-arrows/100/chevron-small-4-01-1024.png",
                           "height": "20px",
                           "altText": "Right chevron icon"
                         }
@@ -452,7 +378,7 @@
                   "$when": "",
                   "type": "Image",
                   "id": "",
-                  "url": "https://localhost:4321/node_modules/myhub-viva-library/dist/Chevron-right_568d82caab07be9ae6d8e1bbef6bfdca.svg",
+                  "url": "https://cdn3.iconfinder.com/data/icons/minicons-ultimate-pack-arrows/100/chevron-small-4-01-1024.png",
                   "height": "20px",
                   "altText": "Chevron right icon"
                 }

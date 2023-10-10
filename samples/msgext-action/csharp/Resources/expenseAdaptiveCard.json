@@ -1,0 +1,712 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "spacing": "ExtraLarge",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextBlock",
+          "size": "Medium",
+          "color": "Default",
+          "weight": "Bolder",
+          "isSubtle": false,
+          "style": "heading",
+          "id": "",
+          "text": "Submit a claim"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextBlock",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "",
+          "text": "The information you are providing is collected here and sent to Forma for your Perks+ reimbursement."
+        }
+      ],
+      "id": ""
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "maxLines": 2,
+          "isSubtle": false,
+          "style": "default",
+          "id": "",
+          "text": "Available balance: **Perks+ | $900"
+        }
+      ],
+      "id": ""
+    },
+    {
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "TextBlock",
+      "size": "Medium",
+      "color": "Default",
+      "weight": "Bolder",
+      "isSubtle": false,
+      "style": "heading",
+      "id": "",
+      "text": "Enter claim details and save claim"
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "RichTextBlock",
+      "id": "category",
+      "inlines": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!hasCategoryError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Category"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${hasCategoryError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Category"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": " *"
+        }
+      ]
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!isCategorySelected}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "categoryID",
+          "text": "Select category"
+        }
+      ],
+      "id": "",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "CLICK_CHANGE_CATEGORY",
+          "selectedIndex": "${$index}"
+        },
+        "title": "Category",
+        "tooltip": "Select category."
+      }
+    },
+    {
+      "separator": true,
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "RichTextBlock",
+      "id": "type",
+      "inlines": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!hasTypeError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Type"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${hasTypeError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Type"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": " *"
+        }
+      ]
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!isTypeSelected}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "typeID",
+          "text": "Select type"
+        }
+      ],
+      "id": "",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "CLICK_CHANGE_TYPE",
+          "selectedIndex": "${$index}"
+        },
+        "title": "Type",
+        "tooltip": "Select type."
+      }
+    },
+    {
+      "separator": true,
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "RichTextBlock",
+      "id": "dateOfPurchase",
+      "inlines": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!hasDateError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Date of purchase"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${hasDateError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Date of purchase"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": " *"
+        }
+      ]
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${isDateSelected}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Bolder",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "dateID",
+          "text": "${date}"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!isDateSelected}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "dateID",
+          "text": "Select date of purchase"
+        }
+      ],
+      "id": "",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "SET_DATE",
+          "selectedIndex": "${$index}"
+        },
+        "title": "Date of purchase",
+        "tooltip": "Invalid Date selected."
+      }
+    },
+    {
+      "separator": true,
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "RichTextBlock",
+      "id": "purchasedFrom",
+      "inlines": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!hasFromError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Purchased from"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${hasFromError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Purchased from"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": " *"
+        }
+      ]
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!isFromEntered}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "purchaseFromID",
+          "text": "Enter purchased from"
+        }
+      ],
+      "id": "",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "SET_FROM",
+          "selectedIndex": "${$index}"
+        },
+        "title": "Purchased from",
+        "tooltip": "Enter purchased from."
+      }
+    },
+    {
+      "separator": true,
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "RichTextBlock",
+      "id": "claimAmount",
+      "inlines": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!hasAmountError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Claim amount"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${hasAmountError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Claim amount"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": " *"
+        }
+      ]
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!isAmountEntered}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "amountID",
+          "text": "Enter claim amount"
+        }
+      ],
+      "id": "",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "SET_AMOUNT",
+          "selectedIndex": "${$index}"
+        },
+        "title": "Claim amount",
+        "tooltip": "$0.00 selected."
+      }
+    },
+    {
+      "separator": true,
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "RichTextBlock",
+      "id": "description",
+      "inlines": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!hasDescriptionError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Description"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${hasDescriptionError}",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": "Description"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextRun",
+          "size": "Small",
+          "color": "Attention",
+          "weight": "Default",
+          "wrap": false,
+          "isSubtle": false,
+          "text": " *"
+        }
+      ]
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${isDescriptionEntered}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Bolder",
+          "wrap": true,
+          "maxLines": 5,
+          "isSubtle": false,
+          "style": "default",
+          "id": "descriptionID",
+          "text": "${description}"
+        },
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "${!isDescriptionEntered}",
+          "type": "TextBlock",
+          "size": "Default",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "isSubtle": false,
+          "style": "default",
+          "id": "descriptionID",
+          "text": "Enter description"
+        }
+      ],
+      "id": "",
+      "selectAction": {
+        "type": "Action.Submit",
+        "data": {
+          "id": "SET_DESCRIPTION",
+          "selectedIndex": "${$index}"
+        },
+        "title": "Description",
+        "tooltip": "Enter description."
+      }
+    },
+    {
+      "separator": true,
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "TextBlock",
+      "size": "Medium",
+      "color": "Default",
+      "weight": "Bolder",
+      "isSubtle": false,
+      "style": "heading",
+      "id": "",
+      "text": "Upload your receipts"
+    },
+    {
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "TextBlock",
+      "size": "Small",
+      "color": "Default",
+      "weight": "Default",
+      "wrap": true,
+      "isSubtle": false,
+      "style": "default",
+      "id": "",
+      "text": "Use as many as 5 files in these formats: .pdf, .png, .jpg/jpeg, .tif/.tiff. Maximum file size is 5MB."
+    },
+    {
+      "spacing": "ExtraLarge",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "spacing": "Padding",
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "ActionSet",
+          "id": "U",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "Upload Image"
+            },
+            {
+              "type": "Action.Submit",
+              "title": "Upload PDF"
+            }
+          ]
+        }
+      ],
+      "id": "claimAttachmentsID"
+    },
+    {
+      "spacing": "Large",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "Center",
+      "$when": "",
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "type": "TextBlock",
+          "size": "Small",
+          "color": "Default",
+          "weight": "Default",
+          "wrap": true,
+          "maxLines": 100,
+          "isSubtle": false,
+          "style": "default",
+          "id": "",
+          "text": "By clicking on the Submit button, I confirm that I have complete documentation and meet the requirements to receive reimbursement for Perks+. I confirm that the expenses for which I’m requesting reimbursement are for my own personal use (except where otherwise noted on HRWeb). I confirm all information is complete and accurate to the best of my knowledge. I understand if I return an item for which I have already received reimbursement through the Perks+ program, I must notify msft-perks@joinforma.com as soon as possible. I agree to work with Forma to return any money I received per the Perks+ guidelines for the returned item. I understand that failing to notify Forma about a returned item, is a violation of the Microsoft General Company Guidelines and may result in disciplinary action, up to and including termination of employment."
+        }
+      ],
+      "id": ""
+    },
+    {
+      "spacing": "ExtraLarge",
+      "horizontalAlignment": "Left",
+      "verticalContentAlignment": "center",
+      "$when": "",
+      "type": "ActionSet",
+      "actions": [
+        {
+          "separator": false,
+          "spacing": "default",
+          "horizontalAlignment": "left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "style": "positive",
+          "id": "SUBMIT_CLAIM_DETAILS",
+          "data": {
+            "id": "SUBMIT_CLAIM_DETAILS"
+          },
+          "type": "Action.Submit",
+          "title": "Submit"
+        },
+        {
+          "separator": false,
+          "spacing": "default",
+          "horizontalAlignment": "left",
+          "verticalContentAlignment": "center",
+          "$when": "",
+          "id": "CANCEL_CLAIM_SUBMISSION",
+          "data": {
+            "id": "CANCEL_CLAIM_SUBMISSION"
+          },
+          "type": "Action.Submit",
+          "title": "Cancel"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

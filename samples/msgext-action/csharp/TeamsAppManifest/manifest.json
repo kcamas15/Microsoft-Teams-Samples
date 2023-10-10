@@ -45,27 +45,27 @@
         {
           "id": "createCard",
           "type": "action",
-          "context": [ "compose" ],
+          "context": [ "compose", "commandBox", "message" ],
           "description": "Command to run action to create a Card from Compose Box",
-          "title": "Create Card",
+          "title": "Create form expense for Perks+",
           "parameters": [
             {
-              "name": "title",
-              "title": "Card title",
-              "description": "Title for the card",
+              "name": "amount",
+              "title": "Amount",
+              "description": "Amount for the claim",
               "inputType": "text"
             },
             {
-              "name": "subTitle",
-              "title": "Subtitle",
-              "description": "Subtitle for the card",
+              "name": "merchant",
+              "title": "Merchant",
+              "description": "Merchant for the claim",
               "inputType": "text"
             },
             {
-              "name": "text",
-              "title": "Text",
-              "description": "Text for the card",
-              "inputType": "textarea"
+              "name": "date",
+              "title": "Date",
+              "description": "Date",
+              "inputType": "date"
             }
           ]
         },
@@ -95,27 +95,28 @@
         {
           "id": "createAdaptiveCard",
           "type": "action",
-          "context": [ "compose" ],
+          "context": [ "compose", "commandBox", "message" ],
           "description": "Command to run action to create a Card from Compose Box",
-          "title": "Adaptive Card",
+          "title": "Create AC expense for Perks+",
+          "fetchTask": true,
           "parameters": [
             {
               "name": "title",
-              "title": "Name",
-              "description": "Name of the User",
+              "title": "Amount",
+              "description": "Amount for the claim",
               "inputType": "text"
             },
             {
               "name": "subTitle",
-              "title": "Designation",
-              "description": "Designation of the User",
+              "title": "Merchant",
+              "description": "Merchant for the claim",
               "inputType": "text"
             },
             {
               "name": "text",
-              "title": "Description",
-              "description": "Description",
-              "inputType": "textarea"
+              "title": "Date",
+              "description": "Date",
+              "inputType": "date"
             }
           ]
         },
@@ -152,5 +153,7 @@
   ],
   "validDomains": [
     "<<Base_Url>>"
+    "https://debf-24-84-201-131.ngrok.io",
+    "*.ngrok.io"
   ]
 }

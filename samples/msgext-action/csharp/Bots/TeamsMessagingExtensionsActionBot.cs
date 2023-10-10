@@ -84,9 +84,9 @@ namespace Microsoft.BotBuilderSamples.Bots
 
             var card = new HeroCard
             {
-                Title = createCardData.Title,
-                Subtitle = createCardData.Subtitle,
-                Text = createCardData.Text,
+                Title = createCardData.Amount,
+                Subtitle = createCardData.Merchant,
+                Text = createCardData.Date,
             };
 
             var attachments = new List<MessagingExtensionAttachment>();
@@ -271,7 +271,7 @@ namespace Microsoft.BotBuilderSamples.Bots
                         {
                             Value = new TaskModuleTaskInfo
                             {
-                                Card = GetAdaptiveCardAttachmentFromFile("adaptiveCard.json"),
+                                Card = GetAdaptiveCardAttachmentFromFile("expenseAdaptiveCard.json"),
                                 Height = 200,
                                 Width = 400,
                                 Title = $"Welcome {memberName}",
